@@ -23,7 +23,7 @@ const containerVariants = {
 interface ValueStackProps {
   c: Copy
   prefersReducedMotion: boolean
-  countdown: { h: string; m: string; s: string }
+  countdown: { d: string;h: string; m: string; s: string }
 }
 
 export function ValueStackSection({ c, prefersReducedMotion, countdown }: ValueStackProps) {
@@ -184,7 +184,7 @@ export function ValueStackSection({ c, prefersReducedMotion, countdown }: ValueS
                   </div>
                   <Button
                     size="sm"
-                    className="min-h-[40px] font-bold border-0"
+                    className="min-h-10 font-bold border-0"
                     style={
                       tier.highlighted
                         ? { backgroundColor: "#C9A84C", color: "#0a0a0a" }
@@ -229,7 +229,7 @@ export function ValueStackSection({ c, prefersReducedMotion, countdown }: ValueS
             <Button
               size="sm"
               variant="outline"
-              className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 font-bold mt-1 w-fit min-h-[40px]"
+              className="border-orange-500/50 text-orange-400 hover:bg-orange-500/10 font-bold mt-1 w-fit min-h-10"
               onClick={() => {
                 document.getElementById("form")?.scrollIntoView({ behavior: "smooth" })
                 trackEvent("growth_hack_click", {})
@@ -283,16 +283,19 @@ export function ValueStackSection({ c, prefersReducedMotion, countdown }: ValueS
           <div className="text-center">
             <p className="text-sm text-slate-400 mb-2">{c.countdownLabel}</p>
             <div className="flex items-center gap-3 font-mono font-black text-3xl text-red-400">
+              <FlipUnit value={countdown.d} />
+              <span className="text-slate-600">d:</span>
               <FlipUnit value={countdown.h} />
-              <span className="text-slate-600">:</span>
+              <span className="text-slate-600">h:</span>
               <FlipUnit value={countdown.m} />
-              <span className="text-slate-600">:</span>
+              <span className="text-slate-600">m:</span>
               <FlipUnit value={countdown.s} />
+              <span className="text-slate-600">s:</span>
             </div>
           </div>
           <Button
             size="lg"
-            className="font-black text-base px-10 py-6 rounded-xl min-h-[44px] w-full sm:w-auto border-0 text-[#0a0a0a]"
+            className="font-black text-base px-10 py-6 rounded-xl min-h-11 w-full sm:w-auto border-0 text-[#0a0a0a]"
             style={{ backgroundColor: "#C9A84C", boxShadow: "0 8px 24px rgba(201,168,76,0.25)" }}
             onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#E8C96A" }}
             onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#C9A84C" }}
@@ -335,6 +338,6 @@ function StrikethroughPrice({ price, prefersReducedMotion }: { price: string; pr
 
 function FlipUnit({ value }: { value: string }) {
   return (
-    <span className="inline-block min-w-[2.5rem] text-center tabular-nums">{value}</span>
+    <span className="inline-block min-w-10 text-center tabular-nums">{value}</span>
   )
 }

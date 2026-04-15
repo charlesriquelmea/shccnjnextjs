@@ -119,7 +119,7 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
         className="rounded-b-2xl border border-t-0 border-slate-700 overflow-hidden"
         style={{ backgroundColor: "#0F172A", minHeight: 480 }}
       >
-        <div className="flex items-center justify-center min-h-[480px] p-8">
+        <div className="flex items-center justify-center min-h-120 p-8">
           <AnimatePresence mode="wait" custom={direction}>
             {done ? (
               <motion.div
@@ -139,7 +139,7 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                 <h3 className="text-2xl font-black text-white">{c.successTitle(name)}</h3>
                 <p className="text-slate-400">{c.successBody}</p>
                 <Button
-                  className="mt-3 bg-green-600 hover:bg-green-700 text-white font-bold gap-2 min-h-[44px]"
+                  className="mt-3 bg-green-600 hover:bg-green-700 text-white font-bold gap-2 min-h-11"
                   onClick={triggerWhatsApp}
                 >
                   <MessageCircle size={18} />
@@ -155,7 +155,7 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                   <p className="text-slate-400">{c.step0Body}</p>
                   <Button
                     size="lg"
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-10 py-6 text-base rounded-xl min-h-[44px]"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold px-10 py-6 text-base rounded-xl min-h-11"
                     onClick={advance}
                   >
                     {c.step0Btn}
@@ -183,7 +183,7 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                   />
                   <p className="text-xs text-slate-600">{c.step1Hint}</p>
                   <Button
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl min-h-[44px] mt-2"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl min-h-11 mt-2"
                     onClick={() => validateName() && advance()}
                   >
                     {c.nextBtn}
@@ -211,7 +211,7 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                   />
                   <p className="text-xs text-slate-600">{c.step1Hint}</p>
                   <Button
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl min-h-[44px] mt-2"
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl min-h-11 mt-2"
                     onClick={() => validatePhone() && advance()}
                   >
                     {c.nextBtn}
@@ -239,7 +239,7 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                               trackEvent("form_step_complete", { step: 3, accessTier: tier.key })
                             }, 220)
                           }}
-                          className={`flex items-start gap-4 p-4 rounded-xl border-2 text-left transition-all duration-200 min-h-[44px] w-full ${
+                          className={`flex items-start gap-4 p-4 rounded-xl border-2 text-left transition-all duration-200 min-h-11 w-full ${
                             selected
                               ? "border-orange-500 bg-orange-500/10"
                               : isReferral
@@ -296,7 +296,7 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                               trackEvent("form_step_complete", { step: 4, level: key })
                             }, 220)
                           }}
-                          className={`flex items-start gap-4 p-4 rounded-xl border-2 text-left transition-all duration-200 min-h-[44px] ${
+                          className={`flex items-start gap-4 p-4 rounded-xl border-2 text-left transition-all duration-200 min-h-11 ${
                             selected
                               ? "border-orange-500 bg-orange-500/10"
                               : "border-slate-700 hover:border-orange-500/50 bg-slate-800/50"

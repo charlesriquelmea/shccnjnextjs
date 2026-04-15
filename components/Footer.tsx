@@ -22,7 +22,7 @@ export function Footer() {
                 <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center font-bold text-foreground">
                   V
                 </div>
-                <span className="font-bold text-lg">VibeLaunch</span>
+                <span className="font-bold text-lg">BuildInN8N</span>
               </div>
               <p className="text-sm opacity-75">
                 Transformando emprendedores latinos a través del conocimiento digital.
@@ -41,7 +41,7 @@ export function Footer() {
             </motion.div>
 
             {/* Legal */}
-            <motion.div variants={itemVariants}>
+{/*             <motion.div variants={itemVariants}>
               <h4 className="font-bold mb-4">Legal</h4>
               <ul className="space-y-2 text-sm opacity-75 hover:opacity-100 transition-opacity">
                 <li><a href="#" className="hover:text-white">Privacidad</a></li>
@@ -49,7 +49,7 @@ export function Footer() {
                 <li><a href="#" className="hover:text-white">Contacto</a></li>
                 <li><a href="#" className="hover:text-white">Soporte</a></li>
               </ul>
-            </motion.div>
+            </motion.div> */}
 
             {/* Social */}
             <motion.div variants={itemVariants}>
@@ -77,7 +77,7 @@ export function Footer() {
           {/* Divider */}
           <motion.div variants={itemVariants} className="border-t border-primary/20 pt-8">
             <div className="text-center text-sm opacity-75">
-              <p>© {currentYear} VibeLaunch. Todos los derechos reservados.</p>
+              <p>© {currentYear} BuildInN8N. Todos los derechos reservados.</p>
               <p className="mt-2">Hecho con ❤️ para emprendedores latinos</p>
             </div>
           </motion.div>
