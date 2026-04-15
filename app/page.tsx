@@ -22,6 +22,7 @@ import { FAQSection } from "@/components/landing/faq-section"
 import { FormSection, FinalCTASection, StickyBar } from "@/components/landing/form-and-cta"
 import { Footer } from "@/components/landing/footer"
 import { N8nAdvantage } from "@/components/N8nAdvantage"
+import HeroUrgencySection from "@/components/sections/HeroUrgencySection"
 
 export default function LandingPage() {
   const [lang, setLang] = useState<Lang>("es")
@@ -61,6 +62,10 @@ export default function LandingPage() {
         <CurriculumSection c={c} prefersReducedMotion={prefersReducedMotion} />
         <ValueStackSection c={c} prefersReducedMotion={prefersReducedMotion} countdown={countdown} />
         {/* TestimonialsSection hidden per product update — re-enable when real testimonials are ready */}
+        {/* TODO:  agregada nueva seccion , quiza pida correrla*/}
+        <HeroUrgencySection c={c} prefersReducedMotion={prefersReducedMotion} />
+
+
         <GuaranteeSection c={c} prefersReducedMotion={prefersReducedMotion} />
         <CredibilitySection c={c} prefersReducedMotion={prefersReducedMotion} />
         <InstructorSection c={c} prefersReducedMotion={prefersReducedMotion} />

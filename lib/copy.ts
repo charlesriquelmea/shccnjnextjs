@@ -56,7 +56,7 @@ export const copy = {
     announcementBar: `🏆 Beneficio Exclusivo SHCCNJ · Descuento de $100 para miembros activos · Solo hasta el Sábado 2 de Mayo → Reclamar ahora`,
 
     // Navbar
-    navLogo: "BuildInN8N",
+    navLogo: "BuildInNextjs",
     navLinks: [
       { label: "El Método", href: "#metodo" },
       { label: "Programa", href: "#curriculum" },
@@ -98,7 +98,7 @@ export const copy = {
       { icon: "🇺🇸", text: "En Español" },
     ],
     memberBadgeText: "MEMBER EXCLUSIVE · SHCCNJ",
-    browserUrl: "BuildInN8N.com ✓ 🔒",
+    browserUrl: "BuildInNextjs.com ✓ 🔒",
     terminalLines: [
       "$ npx create-next-app@latest mi-landing",
       "✓ Ready in 2.3s",
@@ -120,7 +120,7 @@ export const copy = {
       { icon: "💬", text: "Soporte en Español" },
     ],
 
-        // ── Advantage Section (replaces N8n section) ─────────────────────────────
+    // ── Advantage Section (replaces N8n section) ─────────────────────────────
     advantageTitle: "¿Por qué Protolylat para tu negocio en New Jersey?",
     advantageIntro:
       "No somos una agencia genérica. Somos la firma de Ingeniería de IA y Software Factory miembro de la Cámara Hispana de Comercio de NJ para llevar tecnología enterprise a los negocios hispanos — con acompañamiento en español y precios diseñados para PyMEs.",
@@ -553,13 +553,54 @@ export const copy = {
     footerSHCCNJPartner: "Partner Tecnológico Oficial",
     footerSHCCNJDisclaimer:
       "Esta oferta es exclusiva para miembros activos de la Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat se reserva el derecho de verificar membresía activa antes de aplicar el descuento. Válido hasta el 2 de Mayo de 2026.",
-    footerCopy: `© 2026 Protolylat · BuildInN8N. Evento 100% online. Horario Eastern Time (ET). NJ / NY / USA. Hecho con ❤️ para la comunidad hispana.`,
+    footerCopy: `© 2026 Protolylat · BuildInNextjs. Evento 100% online. Horario Eastern Time (ET). NJ / NY / USA. Hecho con ❤️ para la comunidad hispana.`,
+
+    heroUrgency: {
+      banner: "⚡ Early Bird $297 activo — Solo quedan 50 cupos · Sube a $397 después de este Miércoles",
+      wakeupLine1: "¿Cuánto te costó la última landing page que mandaste a hacer?",
+      wakeupLine2: "Ahora multiplica eso por cada cliente nuevo que quieras conseguir este año.",
+      mathHeader: "> cost-analysis --dependency-mode",
+      mathRed: "− Dev externo NJ:  $150/hr × 2 hrs + 4 semanas de espera  =  $300 + tiempo irrecuperable",
+      mathGreen: "+ Este taller:     $297 · 2 horas en vivo  =  autonomía técnica para siempre",
+      tableTitle: "El impuesto silencioso de depender de terceros",
+      tableHeaders: ["Escenario", "Sin Next.js", "Con Next.js (post-taller)"],
+      tableRows: [
+        ["Nueva campaña / landing", "2 semanas + $500–800 externos", "3 horas + deploy propio"],
+        ["SEO de tus activos", "HTML estático — invisible para Google", "SSR nativo — Google te premia"],
+        ["Precio de tu servicio", "Estándar de mercado", "Premium justificado técnicamente"],
+        ["Dependencia de terceros", "Alta — cuello de botella permanente", "Cero — autónomo en producción"],
+      ],
+      marqueeLabel: "Lo que dominarás este Miércoles:",
+      marqueeItems: ["Next.js 15", "Vercel", "Tailwind CSS", "v0.app", "Cursor", "Claude AI", "Framer Motion", "Resend"],
+      riskTitleNow: "AHORA — CADA SEMANA SIN ESTO",
+      riskItemsNow: [
+        "📉 Tu competencia ya deployó 3 sites este mes",
+        "📉 Cada semana = leads que van a otro lado",
+        "📉 El costo de subcontratación se acumula sin ROI",
+      ],
+      riskTitleFuture: "EN 6 MESES — SI NO ACTÚAS",
+      riskItemsFuture: [
+        "❌ Next.js será el estándar mínimo, no el diferencial",
+        "❌ Quienes ya lo saben cobrarán el doble que tú",
+        "❌ Tu brecha técnica habrá crecido 26 semanas más",
+      ],
+      socialProof1: `🔥 ${ENROLLED_THIS_WEEK} personas ya reservaron su lugar esta semana`,
+      socialProof2: `Solo ${SPOTS_AVAILABLE} cupos · Formato en vivo — el Q&A colapsa con más participantes`,
+      ctaHeadline: "No estás comprando un taller. Estás comprando autonomía técnica — para siempre.",
+      ctaButton: "→ Reservar mi cupo — $297 Early Bird",
+      trustLines: [
+        "🛡️ Garantía total — si no deployás una landing, entras al siguiente gratis",
+        "💳 3 cuotas de ~$99 disponibles · Reserva por $150",
+        "📍 Miércoles en vivo · NJ / NY · Online disponible",
+      ],
+      countdownLabel: "Early Bird $297 termina en:",
+    },
   },
 
   en: {
     announcementBar: `🏆 SHCCNJ Exclusive Benefit · $100 discount for active members · Only until Saturday May 2 → Claim now`,
 
-    navLogo: "BuildInN8N",
+    navLogo: "BuildInNextjs",
     navLinks: [
       { label: "The Method", href: "#metodo" },
       { label: "Program", href: "#curriculum" },
@@ -600,7 +641,7 @@ export const copy = {
       { icon: "🇺🇸", text: "In Spanish" },
     ],
     memberBadgeText: "MEMBER EXCLUSIVE · SHCCNJ",
-    browserUrl: "BuildInN8N.com ✓ 🔒",
+    browserUrl: "BuildInNextjs.com ✓ 🔒",
     terminalLines: [
       "$ npx create-next-app@latest my-landing",
       "✓ Ready in 2.3s",
@@ -620,7 +661,7 @@ export const copy = {
       { icon: "💬", text: "Support in Spanish" },
     ],
 
-        // ── Advantage Section ────────────────────────────────────────────────────
+    // ── Advantage Section ────────────────────────────────────────────────────
     advantageTitle: "Why Protolylat for your New Jersey business?",
     advantageIntro:
       "We are not a generic agency. We are the AI Engineering firm and Software Factory member of the Hispanic Chamber of Commerce of NJ to bring enterprise technology to Hispanic businesses — with Spanish-language support and pricing designed for SMBs.",
@@ -1032,7 +1073,48 @@ export const copy = {
     footerSHCCNJPartner: "Official Technology Partner",
     footerSHCCNJDisclaimer:
       "This offer is exclusive for active members of the Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat reserves the right to verify active membership before applying the discount. Valid until May 2, 2026.",
-    footerCopy: `© 2026 Protolylat · BuildInN8N. 100% online event. Eastern Time (ET). NJ / NY / USA. Made with ❤️ for the Hispanic community.`,
+    footerCopy: `© 2026 Protolylat · BuildInNextjs. 100% online event. Eastern Time (ET). NJ / NY / USA. Made with ❤️ for the Hispanic community.`,
+
+    heroUrgency: {
+      banner: "⚡ Early Bird $297 active — Only 50 spots left · Rises to $397 after this Wednesday",
+      wakeupLine1: "How much did the last landing page you commissioned cost you?",
+      wakeupLine2: "Now multiply that by every new client you want to get this year.",
+      mathHeader: "> cost-analysis --dependency-mode",
+      mathRed: "− External Dev NJ:  $150/hr × 2 hrs + 4 weeks of waiting  =  $300 + unrecoverable time",
+      mathGreen: "+ This workshop:  $297 · 2 hours live  =  technical autonomy forever",
+      tableTitle: "The silent tax of depending on third parties",
+      tableHeaders: ["Scenario", "Without Next.js", "With Next.js (post-workshop)"],
+      tableRows: [
+        ["New campaign / landing", "2 weeks + $500–800 external", "3 hours + own deploy"],
+        ["SEO of your assets", "Static HTML — invisible to Google", "Native SSR — Google rewards you"],
+        ["Price of your service", "Market standard", "Technically justified premium"],
+        ["Dependency on third parties", "High — permanent bottleneck", "Zero — autonomous in production"],
+      ],
+      marqueeLabel: "What you will master this Wednesday:",
+      marqueeItems: ["Next.js 15", "Vercel", "Tailwind CSS", "v0.app", "Cursor", "Claude AI", "Framer Motion", "Resend"],
+      riskTitleNow: "NOW — EVERY WEEK WITHOUT THIS",
+      riskItemsNow: [
+        "📉 Your competition already deployed 3 sites this month",
+        "📉 Every week = leads going elsewhere",
+        "📉 Subcontracting cost accumulates without ROI",
+      ],
+      riskTitleFuture: "IN 6 MONTHS — IF YOU DON'T ACT",
+      riskItemsFuture: [
+        "❌ Next.js will be the minimum standard, not the differentiator",
+        "❌ Those who already know it will charge double what you do",
+        "❌ Your technical gap will have grown 26 more weeks",
+      ],
+      socialProof1: `🔥 ${ENROLLED_THIS_WEEK} people have already reserved their spot this week`,
+      socialProof2: `Only ${SPOTS_AVAILABLE} spots · Live format — Q&A collapses with more participants`,
+      ctaHeadline: "You're not buying a workshop. You're buying technical autonomy — forever.",
+      ctaButton: "→ Secure my spot — $297 Early Bird",
+      trustLines: [
+        "🛡️ Total guarantee — if you don't deploy a landing, the next one is free",
+        "💳 3 installments of ~$99 available · Reserve for $150",
+        "📍 Wednesday live · NJ / NY · Online available",
+      ],
+      countdownLabel: "Early Bird $297 ends in:",
+    },
   },
 }
 

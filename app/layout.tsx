@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description: 'Taller intensivo en vivo para latinos en USA. Aprende a construir y deployar landing pages profesionales con Next.js 15 y el método Vibe Coding. 3 horas de formación real. De cero a producción. Solo 50 estudiantes. $297 Early Bird. Garantía total.',
   generator: 'v0.app',
   keywords: ['Next.js', 'Vibe Coding', 'landing page', 'taller en vivo', 'latinos USA', 'NJ NY', 'freelance', 'desarrollo web', 'emprendimiento'],
-  authors: [{ name: 'BuildInN8N' }],
+  authors: [{ name: 'BuildInNextjs' }],
   openGraph: {
     title: 'Formación Next.js en Español | Aprende Vibe Coding en 3 Horas | $297',
     description: 'Taller intensivo en vivo para latinos en USA. De cero a producción en 3 horas. Solo 50 estudiantes. $297 Early Bird. Garantía total.',
@@ -22,6 +22,10 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Formación Next.js en Español | Vibe Coding en 3 Horas',
     description: 'Taller intensivo en vivo para latinos en USA. De cero a producción. Solo 50 cupos. $297.',
+  },
+  icons: {
+    icon: 'favicon.png',
+    apple: 'favicon.png',
   },
 }
 

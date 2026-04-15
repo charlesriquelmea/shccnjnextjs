@@ -43,7 +43,7 @@ function CoBrandLockup() {
           className="hidden items-center px-2 py-0.5 rounded text-xs font-black"
           style={{ backgroundColor: "#C9A84C", color: "#0a0a0a", display: "none" }}
         >
-          SHCCNJ
+          SHCCNJ Build In Nextjs
         </span>
       </a>
 
