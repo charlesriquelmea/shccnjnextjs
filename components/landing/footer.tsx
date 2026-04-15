@@ -98,7 +98,7 @@ export function Footer({ c, lang }: FooterProps) {
               <p>{c.footerEventTime}</p>
               <p>{c.footerOnline}</p>
             </div>
-            <div className="flex flex-wrap gap-2 mt-2">
+{/*             <div className="flex flex-wrap gap-2 mt-2">
               {c.footerLinks.map((link) => (
                 <a
                   key={link}
@@ -110,7 +110,7 @@ export function Footer({ c, lang }: FooterProps) {
                   {link}
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* Col 3: WhatsApp */}
@@ -118,7 +118,7 @@ export function Footer({ c, lang }: FooterProps) {
             <h3 className="text-white font-bold text-sm uppercase tracking-wider">WhatsApp</h3>
             <p className="text-sm text-slate-500">{c.footerWaTitle}</p>
             <Button
-              className="bg-green-600 hover:bg-green-700 text-white font-bold gap-2 w-fit min-h-[44px]"
+              className="bg-green-600 hover:bg-green-700 text-white font-bold gap-2 w-fit min-h-11"
               onClick={() => window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer")}
             >
               <MessageCircle size={16} />

@@ -59,7 +59,7 @@ export function FormSection({ c, lang, prefersReducedMotion }: FormSectionProps)
 interface FinalCTASectionProps {
   c: Copy
   prefersReducedMotion: boolean
-  countdown: { h: string; m: string; s: string }
+  countdown: { d: string; h: string; m: string; s: string }
 }
 
 export function FinalCTASection({ c, prefersReducedMotion, countdown }: FinalCTASectionProps) {
@@ -121,7 +121,7 @@ export function FinalCTASection({ c, prefersReducedMotion, countdown }: FinalCTA
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: "-80px" }}
-          className="text-xl text-slate-300 font-medium min-h-[2rem]"
+          className="text-xl text-slate-300 font-medium min-h-8"
         >
           {displayed}
           <motion.span
@@ -143,11 +143,14 @@ export function FinalCTASection({ c, prefersReducedMotion, countdown }: FinalCTA
         >
           <p className="text-sm text-slate-400">{c.countdownLabel}</p>
           <div className="flex items-center gap-2 font-mono font-black text-4xl md:text-5xl text-red-400">
+            <span className="tabular-nums">{countdown.d}</span>
+            <span className="text-slate-700">d:</span>
             <span className="tabular-nums">{countdown.h}</span>
-            <span className="text-slate-700">:</span>
+            <span className="text-slate-700">h:</span>
             <span className="tabular-nums">{countdown.m}</span>
-            <span className="text-slate-700">:</span>
+            <span className="text-slate-700">m:</span>
             <span className="tabular-nums">{countdown.s}</span>
+            <span className="text-slate-700">s</span>
           </div>
         </motion.div>
 
@@ -172,7 +175,7 @@ export function FinalCTASection({ c, prefersReducedMotion, countdown }: FinalCTA
         >
           <Button
             size="lg"
-            className="font-black text-lg px-12 py-7 rounded-xl w-full sm:w-auto hover:scale-[1.02] transition-all min-h-[44px] border-0 text-[#0a0a0a]"
+            className="font-black text-lg px-12 py-7 rounded-xl w-full sm:w-auto hover:scale-[1.02] transition-all min-h-11 border-0 text-[#0a0a0a]"
             style={{ backgroundColor: "#C9A84C", boxShadow: "0 8px 32px rgba(201,168,76,0.3)" }}
             onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#E8C96A" }}
             onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#C9A84C" }}
@@ -187,7 +190,8 @@ export function FinalCTASection({ c, prefersReducedMotion, countdown }: FinalCTA
             <Button
               size="sm"
               variant="outline"
-              className="border-slate-600 text-slate-300 hover:bg-slate-800 font-semibold rounded-xl min-h-[44px]"
+              className="border-slate-600 text-slate-300 hover:bg-slate-800
+               font-semibold rounded-xl min-h-11"
               onClick={() => {
                 window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer")
                 trackEvent("cta_click", { location: "final_cta_secondary" })
@@ -223,7 +227,7 @@ export function FinalCTASection({ c, prefersReducedMotion, countdown }: FinalCTA
 interface StickyBarProps {
   c: Copy
   prefersReducedMotion: boolean
-  countdown: { h: string; m: string; s: string }
+  countdown: {d:string; h: string; m: string; s: string }
 }
 
 export function StickyBar({ c, prefersReducedMotion, countdown }: StickyBarProps) {
@@ -260,12 +264,12 @@ export function StickyBar({ c, prefersReducedMotion, countdown }: StickyBarProps
             <p className="text-sm text-slate-300 font-medium text-center sm:text-left">
               {c.stickyText}{" "}
               <span className="text-red-400 font-mono font-bold">
-                {countdown.h}:{countdown.m}:{countdown.s}
+                {countdown.d}d:{countdown.h}h:{countdown.m}m:{countdown.s}s
               </span>
             </p>
             <Button
               size="sm"
-              className="font-bold shrink-0 min-h-[44px] px-6 border-0 text-[#0a0a0a]"
+              className="font-bold shrink-0 min-h-11 px-6 border-0 text-[#0a0a0a]"
               style={{ backgroundColor: "#C9A84C" }}
               onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#E8C96A" }}
               onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#C9A84C" }}

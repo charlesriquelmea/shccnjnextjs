@@ -56,7 +56,7 @@ export const copy = {
     announcementBar: `🏆 Beneficio Exclusivo SHCCNJ · Descuento de $100 para miembros activos · Solo hasta el Sábado 2 de Mayo → Reclamar ahora`,
 
     // Navbar
-    navLogo: "VibeLaunch",
+    navLogo: "BuildInN8N",
     navLinks: [
       { label: "El Método", href: "#metodo" },
       { label: "Programa", href: "#curriculum" },
@@ -98,7 +98,7 @@ export const copy = {
       { icon: "🇺🇸", text: "En Español" },
     ],
     memberBadgeText: "MEMBER EXCLUSIVE · SHCCNJ",
-    browserUrl: "vibelaunch.com ✓ 🔒",
+    browserUrl: "BuildInN8N.com ✓ 🔒",
     terminalLines: [
       "$ npx create-next-app@latest mi-landing",
       "✓ Ready in 2.3s",
@@ -119,6 +119,35 @@ export const copy = {
       { icon: "🎓", text: "+200 Estudiantes Formados" },
       { icon: "💬", text: "Soporte en Español" },
     ],
+
+        // ── Advantage Section (replaces N8n section) ─────────────────────────────
+    advantageTitle: "¿Por qué Protolylat para tu negocio en New Jersey?",
+    advantageIntro:
+      "No somos una agencia genérica. Somos la firma de Ingeniería de IA y Software Factory miembro de la Cámara Hispana de Comercio de NJ para llevar tecnología enterprise a los negocios hispanos — con acompañamiento en español y precios diseñados para PyMEs.",
+    advantageCards: [
+      {
+        title: "IA Engineering",
+        body: "Construimos agentes de IA personalizados para tu industria: atención al cliente, captación de leads, análisis de datos. Sin código genérico.",
+        stat: "ROI medible en 90 días",
+      },
+      {
+        title: "Software Factory",
+        body: "Tu idea se convierte en producto digital. Desde MVP hasta plataforma escalable, con un equipo dedicado a tu visión.",
+        stat: "Entrega en semanas, no meses",
+      },
+      {
+        title: "Infraestructura Cloud",
+        body: "Migramos, optimizamos y aseguramos tu operación digital. AWS, GCP, Azure — al precio correcto para PyMEs.",
+        stat: "Hasta 60% menos en costos cloud",
+      },
+      {
+        title: "Automatización de Procesos",
+        body: "Eliminamos el trabajo manual de tu operación: facturación, seguimiento de clientes, reportes — todo automatizado.",
+        stat: "+20 horas/semana recuperadas",
+      },
+    ],
+    advantageQuote:
+      "Los negocios hispanos en NJ merecen la misma tecnología que usan las Fortune 500 — sin intermediarios, sin costos prohibitivos, con acompañamiento en español.",
 
     // Pain points
     painTitle: "¿Te suena familiar alguno de estos?",
@@ -524,13 +553,13 @@ export const copy = {
     footerSHCCNJPartner: "Partner Tecnológico Oficial",
     footerSHCCNJDisclaimer:
       "Esta oferta es exclusiva para miembros activos de la Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat se reserva el derecho de verificar membresía activa antes de aplicar el descuento. Válido hasta el 2 de Mayo de 2026.",
-    footerCopy: `© 2026 Protolylat · VibeLaunch. Evento 100% online. Horario Eastern Time (ET). NJ / NY / USA. Hecho con ❤️ para la comunidad hispana.`,
+    footerCopy: `© 2026 Protolylat · BuildInN8N. Evento 100% online. Horario Eastern Time (ET). NJ / NY / USA. Hecho con ❤️ para la comunidad hispana.`,
   },
 
   en: {
     announcementBar: `🏆 SHCCNJ Exclusive Benefit · $100 discount for active members · Only until Saturday May 2 → Claim now`,
 
-    navLogo: "VibeLaunch",
+    navLogo: "BuildInN8N",
     navLinks: [
       { label: "The Method", href: "#metodo" },
       { label: "Program", href: "#curriculum" },
@@ -571,7 +600,7 @@ export const copy = {
       { icon: "🇺🇸", text: "In Spanish" },
     ],
     memberBadgeText: "MEMBER EXCLUSIVE · SHCCNJ",
-    browserUrl: "vibelaunch.com ✓ 🔒",
+    browserUrl: "BuildInN8N.com ✓ 🔒",
     terminalLines: [
       "$ npx create-next-app@latest my-landing",
       "✓ Ready in 2.3s",
@@ -590,6 +619,35 @@ export const copy = {
       { icon: "🎓", text: "+200 Students Trained" },
       { icon: "💬", text: "Support in Spanish" },
     ],
+
+        // ── Advantage Section ────────────────────────────────────────────────────
+    advantageTitle: "Why Protolylat for your New Jersey business?",
+    advantageIntro:
+      "We are not a generic agency. We are the AI Engineering firm and Software Factory member of the Hispanic Chamber of Commerce of NJ to bring enterprise technology to Hispanic businesses — with Spanish-language support and pricing designed for SMBs.",
+    advantageCards: [
+      {
+        title: "AI Engineering",
+        body: "We build custom AI agents for your industry: customer service, lead generation, data analysis. No generic code.",
+        stat: "Measurable ROI in 90 days",
+      },
+      {
+        title: "Software Factory",
+        body: "Your idea becomes a digital product. From MVP to scalable platform, with a team dedicated to your vision.",
+        stat: "Delivery in weeks, not months",
+      },
+      {
+        title: "Cloud Infrastructure",
+        body: "We migrate, optimize and secure your digital operation. AWS, GCP, Azure — at the right price for SMBs.",
+        stat: "Up to 60% less in cloud costs",
+      },
+      {
+        title: "Process Automation",
+        body: "We eliminate manual work from your operation: billing, client follow-up, reports — all automated.",
+        stat: "+20 hours/week recovered",
+      },
+    ],
+    advantageQuote:
+      "Hispanic businesses in NJ deserve the same technology used by Fortune 500 companies — without intermediaries, without prohibitive costs, with Spanish-language support.",
 
     painTitle: "Do any of these sound familiar?",
     painIntro:
@@ -974,7 +1032,7 @@ export const copy = {
     footerSHCCNJPartner: "Official Technology Partner",
     footerSHCCNJDisclaimer:
       "This offer is exclusive for active members of the Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat reserves the right to verify active membership before applying the discount. Valid until May 2, 2026.",
-    footerCopy: `© 2026 Protolylat · VibeLaunch. 100% online event. Eastern Time (ET). NJ / NY / USA. Made with ❤️ for the Hispanic community.`,
+    footerCopy: `© 2026 Protolylat · BuildInN8N. 100% online event. Eastern Time (ET). NJ / NY / USA. Made with ❤️ for the Hispanic community.`,
   },
 }
 

@@ -147,7 +147,7 @@ export function Navbar({ c, lang, setLang, prefersReducedMotion, countdown }: Na
           <span className="text-xs font-mono text-slate-400 hidden lg:block">
             {c.navCountdownLabel}{" "}
             <span className="font-bold" style={{ color: "#C9A84C" }}>
-              {countdown.h}:{countdown.m}:{countdown.s}
+              {countdown.d}d:{countdown.h}h:{countdown.m}m:{countdown.s}s
             </span>
           </span>
 

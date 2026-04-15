@@ -1,0 +1,1 @@
+export const DATE_OF_COURSE = "2026-05-02T10:00:00-04:00"

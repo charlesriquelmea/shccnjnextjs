@@ -92,7 +92,7 @@ function TypewriterEffect({ phrases, prefersReducedMotion }: { phrases: string[]
   }, [displayed, isDeleting, isPaused, phraseIdx, phrases, prefersReducedMotion])
 
   return (
-    <p className="text-lg md:text-xl text-slate-300 font-medium mt-4 min-h-[2rem]">
+    <p className="text-lg md:text-xl text-slate-300 font-medium mt-4 min-h-8">
       <span className="text-white">{displayed}</span>
       <motion.span
         className="ml-0.5"
@@ -184,11 +184,11 @@ function BrowserMockup({ c, prefersReducedMotion }: { c: Copy; prefersReducedMot
         </div>
 
         {/* Browser content */}
-        <div className="bg-slate-900 p-5 min-h-[220px] relative overflow-hidden">
+        <div className="bg-slate-900 p-5 min-h-55 relative overflow-hidden">
           {/* Skeleton shimmer */}
           <div className="h-16 rounded-lg mb-4 overflow-hidden bg-slate-800 relative">
             <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-transparent via-slate-600/30 to-transparent"
+              className="absolute inset-0 bg-linear-to-r from-transparent via-slate-600/30 to-transparent"
               animate={prefersReducedMotion ? {} : { x: ["-100%", "100%"] }}
               transition={{ duration: 1.8, repeat: Infinity, ease: "linear" }}
             />
@@ -368,7 +368,7 @@ export function HeroSection({ c, prefersReducedMotion }: HeroProps) {
               <motion.div variants={fadeUpVariants} className="flex flex-col sm:flex-row gap-3 mt-2">
                 <Button
                   size="lg"
-                  className="font-black text-base px-8 py-6 rounded-xl shadow-lg transition-all hover:scale-[1.02] min-h-[44px] text-[#0a0a0a] border-0"
+                  className="font-black text-base px-8 py-6 rounded-xl shadow-lg transition-all hover:scale-[1.02] min-h-11 text-[#0a0a0a] border-0"
                   style={{ backgroundColor: "#C9A84C", boxShadow: "0 8px 24px rgba(201,168,76,0.25)" }}
                   onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#E8C96A" }}
                   onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#C9A84C" }}
@@ -379,7 +379,7 @@ export function HeroSection({ c, prefersReducedMotion }: HeroProps) {
                 <Button
                   size="lg"
                   variant="outline"
-                  className="border-slate-600 text-slate-300 hover:bg-slate-800 font-semibold rounded-xl min-h-[44px]"
+                  className="border-slate-600 text-slate-300 hover:bg-slate-800 font-semibold rounded-xl min-h-11"
                   onClick={() => {
                     document.getElementById("curriculum")?.scrollIntoView({ behavior: "smooth" })
                   }}

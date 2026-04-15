@@ -60,7 +60,7 @@ export function Speakers() {
               >
                 <div className="bg-secondary rounded-2xl p-8 border border-border hover:border-primary transition-all h-full hover:shadow-lg">
                   {/* Avatar placeholder */}
-                  <div className="w-24 h-24 rounded-full bg-gradient-to-br from-primary to-primary/50 flex items-center justify-center text-primary-foreground font-bold text-3xl mb-6 mx-auto group-hover:scale-110 transition-transform">
+                  <div className="w-24 h-24 rounded-full bg-linear-to-br from-primary to-primary/50 flex items-center justify-center text-primary-foreground font-bold text-3xl mb-6 mx-auto group-hover:scale-110 transition-transform">
                     {speaker.name.charAt(0)}
                   </div>
 
@@ -72,7 +72,7 @@ export function Speakers() {
                     {speaker.title}
                   </p>
 
-                  <p className="text-muted-foreground text-center mb-6 min-h-[3rem]">
+                  <p className="text-muted-foreground text-center mb-6 min-h-12">
                     {speaker.bio}
                   </p>
 

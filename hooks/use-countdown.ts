@@ -1,9 +1,10 @@
 "use client"
 
+import { DATE_OF_COURSE } from "@/lib/const"
 import { useState, useEffect } from "react"
 
 // Saturday April 25, 2026 at 10:00 AM Eastern Time
-const EVENT_TARGET = new Date("2026-04-25T10:00:00-04:00").getTime()
+const EVENT_TARGET = new Date(DATE_OF_COURSE).getTime()
 
 function pad(n: number) {
   return String(n).padStart(2, "0")
@@ -30,10 +31,10 @@ export function useCountdown() {
     return () => clearInterval(interval)
   }, [mounted])
 
-  const days = pad(Math.floor(timeLeft / 86400))
+  const d = pad(Math.floor(timeLeft / 86400))
   const h = pad(Math.floor((timeLeft % 86400) / 3600))
   const m = pad(Math.floor((timeLeft % 3600) / 60))
   const s = pad(timeLeft % 60)
 
-  return { days, h, m, s, total: timeLeft }
+  return { d, h, m, s, total: timeLeft }
 }

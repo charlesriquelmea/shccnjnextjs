@@ -21,6 +21,7 @@ import { InstructorSection } from "@/components/landing/instructor-section"
 import { FAQSection } from "@/components/landing/faq-section"
 import { FormSection, FinalCTASection, StickyBar } from "@/components/landing/form-and-cta"
 import { Footer } from "@/components/landing/footer"
+import { N8nAdvantage } from "@/components/N8nAdvantage"
 
 export default function LandingPage() {
   const [lang, setLang] = useState<Lang>("es")
@@ -51,6 +52,9 @@ export default function LandingPage() {
         <HeroSection c={c} prefersReducedMotion={prefersReducedMotion} />
         <TrustBar c={c} prefersReducedMotion={prefersReducedMotion} />
         <TechTicker c={c} prefersReducedMotion={prefersReducedMotion} />
+        {/* TODO: agregar aca nueva seccion, adaptar estilos */}
+        <N8nAdvantage lang={lang} />
+
         <PainPointsSection c={c} prefersReducedMotion={prefersReducedMotion} />
         <VibeCodingSection c={c} prefersReducedMotion={prefersReducedMotion} />
         <NextJsAdvantageSection c={c} prefersReducedMotion={prefersReducedMotion} />

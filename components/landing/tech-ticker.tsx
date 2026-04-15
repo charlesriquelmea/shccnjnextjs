@@ -14,7 +14,7 @@ export function TechTicker({ c, prefersReducedMotion }: TechTickerProps) {
   const items = [...TECH_BADGES, ...TECH_BADGES]
 
   return (
-    <div className="bg-slate-800 py-4 overflow-hidden border-y border-slate-700">
+    <div className="py-4 overflow-hidden border-y border-slate-700 bg-slate-800 ">
       <div className="flex items-center gap-6">
         <span className="text-slate-400 text-sm font-semibold whitespace-nowrap pl-6 shrink-0">
           {c.tickerPrefix}
