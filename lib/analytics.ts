@@ -2,7 +2,7 @@
 // In production: window.gtag('event', name, params)
 
 export function trackEvent(name: string, params?: Record<string, unknown>) {
-  console.log("BuildInN8N Analytics:", name, params ?? {})
+  console.log("BuildInNextjs Analytics:", name, params ?? {})
   // In production:
   // if (typeof window !== "undefined" && window.gtag) {
   //   window.gtag("event", name, params)

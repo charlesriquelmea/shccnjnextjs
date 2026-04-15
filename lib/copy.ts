@@ -56,7 +56,7 @@ export const copy = {
     announcementBar: `🏆 Beneficio Exclusivo SHCCNJ · Descuento de $100 para miembros activos · Solo hasta el Sábado 2 de Mayo → Reclamar ahora`,
 
     // Navbar
-    navLogo: "BuildInN8N",
+    navLogo: "BuildInNextjs",
     navLinks: [
       { label: "El Método", href: "#metodo" },
       { label: "Programa", href: "#curriculum" },
@@ -98,7 +98,7 @@ export const copy = {
       { icon: "🇺🇸", text: "En Español" },
     ],
     memberBadgeText: "MEMBER EXCLUSIVE · SHCCNJ",
-    browserUrl: "BuildInN8N.com ✓ 🔒",
+    browserUrl: "BuildInNextjs.com ✓ 🔒",
     terminalLines: [
       "$ npx create-next-app@latest mi-landing",
       "✓ Ready in 2.3s",
@@ -553,13 +553,13 @@ export const copy = {
     footerSHCCNJPartner: "Partner Tecnológico Oficial",
     footerSHCCNJDisclaimer:
       "Esta oferta es exclusiva para miembros activos de la Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat se reserva el derecho de verificar membresía activa antes de aplicar el descuento. Válido hasta el 2 de Mayo de 2026.",
-    footerCopy: `© 2026 Protolylat · BuildInN8N. Evento 100% online. Horario Eastern Time (ET). NJ / NY / USA. Hecho con ❤️ para la comunidad hispana.`,
+    footerCopy: `© 2026 Protolylat · BuildInNextjs. Evento 100% online. Horario Eastern Time (ET). NJ / NY / USA. Hecho con ❤️ para la comunidad hispana.`,
   },
 
   en: {
     announcementBar: `🏆 SHCCNJ Exclusive Benefit · $100 discount for active members · Only until Saturday May 2 → Claim now`,
 
-    navLogo: "BuildInN8N",
+    navLogo: "BuildInNextjs",
     navLinks: [
       { label: "The Method", href: "#metodo" },
       { label: "Program", href: "#curriculum" },
@@ -600,7 +600,7 @@ export const copy = {
       { icon: "🇺🇸", text: "In Spanish" },
     ],
     memberBadgeText: "MEMBER EXCLUSIVE · SHCCNJ",
-    browserUrl: "BuildInN8N.com ✓ 🔒",
+    browserUrl: "BuildInNextjs.com ✓ 🔒",
     terminalLines: [
       "$ npx create-next-app@latest my-landing",
       "✓ Ready in 2.3s",
@@ -1032,7 +1032,7 @@ export const copy = {
     footerSHCCNJPartner: "Official Technology Partner",
     footerSHCCNJDisclaimer:
       "This offer is exclusive for active members of the Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat reserves the right to verify active membership before applying the discount. Valid until May 2, 2026.",
-    footerCopy: `© 2026 Protolylat · BuildInN8N. 100% online event. Eastern Time (ET). NJ / NY / USA. Made with ❤️ for the Hispanic community.`,
+    footerCopy: `© 2026 Protolylat · BuildInNextjs. 100% online event. Eastern Time (ET). NJ / NY / USA. Made with ❤️ for the Hispanic community.`,
   },
 }
 

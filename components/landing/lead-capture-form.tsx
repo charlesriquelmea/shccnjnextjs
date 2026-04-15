@@ -9,8 +9,8 @@ import type { Copy, Lang } from "@/lib/copy"
 import { WA_NUMBER } from "@/lib/copy"
 import { trackEvent } from "@/lib/analytics"
 
-// Steps: 0=intro, 1=name, 2=phone, 3=access tier, 4=level, 5=loading
-const TOTAL_STEPS = 4
+// Steps: 0=intro, 1=name, 2=email, 3=phone, 4=access tier, 5=level, 6=loading
+const TOTAL_STEPS = 5
 
 const slideIn = {
   enter: (dir: number) => ({ x: dir > 0 ? 60 : -60, opacity: 0 }),
@@ -28,14 +28,17 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
   const [step, setStep] = useState(0)
   const [direction, setDirection] = useState(1)
   const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
   const [phone, setPhone] = useState("")
   const [accessTier, setAccessTier] = useState("")
   const [level, setLevel] = useState("")
   const [nameError, setNameError] = useState(false)
+  const [emailError, setEmailError] = useState(false)
   const [phoneError, setPhoneError] = useState(false)
   const [loadingIdx, setLoadingIdx] = useState(0)
   const [done, setDone] = useState(false)
   const nameRef = useRef<HTMLInputElement>(null)
+  const emailRef = useRef<HTMLInputElement>(null)
   const phoneRef = useRef<HTMLInputElement>(null)
 
   const advance = () => {
@@ -47,12 +50,35 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
   // Auto-focus inputs when step changes
   useEffect(() => {
     if (step === 1) setTimeout(() => nameRef.current?.focus(), 350)
-    if (step === 2) setTimeout(() => phoneRef.current?.focus(), 350)
+    if (step === 2) setTimeout(() => emailRef.current?.focus(), 350)
+    if (step === 3) setTimeout(() => phoneRef.current?.focus(), 350)
   }, [step])
 
-  // Loading step logic — step 5 triggers loading sequence
+  // Loading step logic — step 6 triggers loading sequence
   useEffect(() => {
-    if (step !== 5) return
+    if (step !== 6) return
+    
+    // Call API as soon as loading starts
+    const sendData = async () => {
+      try {
+        await fetch("/api/send-email", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            name,
+            email,
+            phone,
+            accessTier: c.accessTiers.find((t) => t.key === accessTier)?.title ?? accessTier,
+            level: c.levelCards[["A", "B", "C"].indexOf(level)]?.title ?? level,
+            lang
+          }),
+        })
+      } catch (err) {
+        console.error("Failed to send email:", err)
+      }
+    }
+    sendData()
+
     const texts = c.loadingTexts
     let idx = 0
     const interval = setInterval(() => {
@@ -85,6 +111,16 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
     if (name.trim().length < 2) {
       setNameError(true)
       setTimeout(() => setNameError(false), 600)
+      return false
+    }
+    return true
+  }
+
+  const validateEmail = () => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+    if (!emailRegex.test(email)) {
+      setEmailError(true)
+      setTimeout(() => setEmailError(false), 600)
       return false
     }
     return true
@@ -194,6 +230,33 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
             ) : step === 2 ? (
               <StepMotion key="step2" dir={direction} prefersReducedMotion={prefersReducedMotion}>
                 <div className="flex flex-col gap-5 w-full">
+                  <h3 className="text-2xl font-bold text-white">{c.step2EmailLabel || (lang === "es" ? "¿Cuál es tu email?" : "What is your email?")}</h3>
+                  <motion.input
+                    ref={emailRef}
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" && validateEmail()) advance()
+                    }}
+                    placeholder="email@ejemplo.com"
+                    animate={emailError && !prefersReducedMotion ? { x: [-8, 8, -8, 8, 0] } : {}}
+                    transition={{ duration: 0.4 }}
+                    className="bg-transparent border-b-2 border-slate-600 focus:border-orange-500 outline-none text-white text-xl py-3 placeholder:text-slate-600 transition-colors w-full"
+                  />
+                  <p className="text-xs text-slate-600">{c.step2EmailHint || (lang === "es" ? "Aquí te enviaremos los detalles del taller." : "We'll send you the workshop details here.")}</p>
+                  <Button
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold rounded-xl min-h-11 mt-2"
+                    onClick={() => validateEmail() && advance()}
+                  >
+                    {c.nextBtn}
+                  </Button>
+                </div>
+              </StepMotion>
+
+            ) : step === 3 ? (
+              <StepMotion key="step3" dir={direction} prefersReducedMotion={prefersReducedMotion}>
+                <div className="flex flex-col gap-5 w-full">
                   <h3 className="text-2xl font-bold text-white">{c.step2Label}</h3>
                   <p className="text-sm text-slate-500 -mt-3">{c.step2Sub}</p>
                   <motion.input
@@ -219,9 +282,9 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                 </div>
               </StepMotion>
 
-            ) : step === 3 ? (
-              /* ── Step 3: Access tier selection ── */
-              <StepMotion key="step3-access" dir={direction} prefersReducedMotion={prefersReducedMotion}>
+            ) : step === 4 ? (
+              /* ── Step 4: Access tier selection ── */
+              <StepMotion key="step4-access" dir={direction} prefersReducedMotion={prefersReducedMotion}>
                 <div className="flex flex-col gap-4 w-full">
                   <h3 className="text-xl font-bold text-white">{c.step3AccessLabel}</h3>
                   <div className="flex flex-col gap-3">
@@ -235,8 +298,8 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                             setAccessTier(tier.key)
                             setTimeout(() => {
                               setDirection(1)
-                              setStep(4)
-                              trackEvent("form_step_complete", { step: 3, accessTier: tier.key })
+                              setStep(5)
+                              trackEvent("form_step_complete", { step: 4, accessTier: tier.key })
                             }, 220)
                           }}
                           className={`flex items-start gap-4 p-4 rounded-xl border-2 text-left transition-all duration-200 min-h-11 w-full ${
@@ -276,9 +339,9 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                 </div>
               </StepMotion>
 
-            ) : step === 4 ? (
-              /* ── Step 4: Level selection ── */
-              <StepMotion key="step4-level" dir={direction} prefersReducedMotion={prefersReducedMotion}>
+            ) : step === 5 ? (
+              /* ── Step 5: Level selection ── */
+              <StepMotion key="step5-level" dir={direction} prefersReducedMotion={prefersReducedMotion}>
                 <div className="flex flex-col gap-5 w-full">
                   <h3 className="text-xl font-bold text-white">{c.step4Label}</h3>
                   <div className="flex flex-col gap-3">
@@ -292,8 +355,8 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
                             setLevel(key)
                             setTimeout(() => {
                               setDirection(1)
-                              setStep(5)
-                              trackEvent("form_step_complete", { step: 4, level: key })
+                              setStep(6)
+                              trackEvent("form_step_complete", { step: 5, level: key })
                             }, 220)
                           }}
                           className={`flex items-start gap-4 p-4 rounded-xl border-2 text-left transition-all duration-200 min-h-11 ${
@@ -318,8 +381,8 @@ export function LeadCaptureForm({ c, lang, prefersReducedMotion }: FormProps) {
               </StepMotion>
 
             ) : (
-              /* ── Step 5: Loading ── */
-              <StepMotion key="step5-loading" dir={direction} prefersReducedMotion={prefersReducedMotion}>
+              /* ── Step 6: Loading ── */
+              <StepMotion key="step6-loading" dir={direction} prefersReducedMotion={prefersReducedMotion}>
                 <div className="flex flex-col items-center text-center gap-6 w-full">
                   <Loader2 size={56} className="text-orange-500 animate-spin" />
                   <AnimatePresence mode="wait">
