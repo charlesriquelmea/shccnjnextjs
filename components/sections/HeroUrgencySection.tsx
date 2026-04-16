@@ -296,14 +296,14 @@ export default function HeroUrgencySection({ c, prefersReducedMotion }: HeroUrge
           {/* Block 8 & 9 — Social Proof & CTA */}
           <div className="space-y-16 text-center py-10 scale-100 md:scale-105 transition-transform">
             <div className="space-y-3">
-              <motion.p
+              {/* <motion.p
                 initial={{ opacity: 0, y: 10 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 className="text-amber-400/90 text-[15px] font-mono font-bold"
               >
                 {h.socialProof1}
-              </motion.p>
+              </motion.p> */}
               <p className="text-zinc-500 text-[11px] uppercase tracking-[0.3em] font-black opacity-60">
                 {h.socialProof2}
               </p>
