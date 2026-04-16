@@ -201,7 +201,7 @@ export function FinalCTASection({ c, prefersReducedMotion, countdown }: FinalCTA
             </Button>
           )}
           <p className="text-xs text-slate-500">{c.finalMicro}</p>
-          <p className="text-sm font-semibold" style={{ color: "#C9A84C" }}>{c.finalSocial}</p>
+          {/* <p className="text-sm font-semibold" style={{ color: "#C9A84C" }}>{c.finalSocial}</p> */}
         </motion.div>
 
         {/* Event summary card */}

@@ -5,6 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 const mailPrimero = process.env.MAILPRIMERO || '';
 const mailSegundo = process.env.MAILSEGUNDO || '';
+const mailTercero = process.env.MAILTERCERO || '';
 
 export async function POST(request: Request) {
     try {
@@ -24,7 +25,7 @@ export async function POST(request: Request) {
         const { data, error } = await resend.emails.send({
             from: fromEmail,
             to: [mailPrimero],
-            cc: [mailSegundo], //lo que va
+            cc: [mailSegundo, mailTercero], //lo que va
             subject: `Nuevo Lead: Landing Page en 3 Horas — ${name}`,
             html: buildEmailHtml({ name, email, phone, accessTier, level, lang }),
         });

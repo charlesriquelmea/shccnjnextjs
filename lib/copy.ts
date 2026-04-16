@@ -590,7 +590,7 @@ export const copy = {
       ctaButton: "→ Reservar mi cupo — $297 Early Bird",
       trustLines: [
         "🛡️ Garantía total — si no deployás una landing, entras al siguiente gratis",
-        "💳 3 cuotas de ~$99 disponibles · Reserva por $150",
+        "💳 3 cuotas de ~$99 disponibles +5.9% + $0.30 · Reserva por $150",
         "📍 Miércoles en vivo · NJ / NY · Online disponible",
       ],
       countdownLabel: "Early Bird $297 termina en:",
@@ -1110,7 +1110,7 @@ export const copy = {
       ctaButton: "→ Secure my spot — $297 Early Bird",
       trustLines: [
         "🛡️ Total guarantee — if you don't deploy a landing, the next one is free",
-        "💳 3 installments of ~$99 available · Reserve for $150",
+        "💳 3 installments of ~$99 available +5.9% + $0.30 · Reserve for $150",
         "📍 Wednesday live · NJ / NY · Online available",
       ],
       countdownLabel: "Early Bird $297 ends in:",
