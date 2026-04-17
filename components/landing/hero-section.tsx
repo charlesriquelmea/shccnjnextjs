@@ -157,7 +157,7 @@ function BrowserMockup({ c, prefersReducedMotion }: { c: Copy; prefersReducedMot
     }, 40)
 
     return () => clearInterval(interval)
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [terminalLine, prefersReducedMotion])
 
   return (
@@ -181,6 +181,7 @@ function BrowserMockup({ c, prefersReducedMotion }: { c: Copy; prefersReducedMot
           <div className="flex-1 bg-slate-700/60 rounded-md px-3 py-1 text-xs text-slate-400 font-mono">
             {c.browserUrl}
           </div>
+
         </div>
 
         {/* Browser content */}
@@ -286,7 +287,8 @@ export function HeroSection({ c, prefersReducedMotion }: HeroProps) {
               {/* Eyebrow badge */}
               <motion.div variants={fadeUpVariants}>
                 <span
-                  className="inline-flex items-center px-4 py-2 rounded-full border text-sm font-semibold"
+                  className="inline-flex items-center px-4 py-2 rounded-full 
+                  border text-sm font-semibold"
                   style={{
                     borderColor: "rgba(201,168,76,0.6)",
                     backgroundColor: "rgba(201,168,76,0.1)",
@@ -336,6 +338,27 @@ export function HeroSection({ c, prefersReducedMotion }: HeroProps) {
                   {c.heroPriceMember}
                 </span>
                 <span className="text-sm text-slate-400">{c.heroPriceLabel}</span>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 1.1, duration: 0.6, ease: "easeOut" }}
+                className="rounded-xl p-5 flex items-start gap-4"
+                style={{
+                  backgroundColor: "rgba(201,147,58,0.08)",
+                  border: "1px solid rgba(201,147,58,0.35)",
+                }}
+              >
+                <span className="text-2xl shrink-0">🏅</span>
+                <div>
+                  <p className="font-bold text-sm mb-1" style={{ color: "#D9A84E" }}>
+                    {c.memberBannerTitle}
+                  </p>
+                  <p className="text-sm leading-relaxed" style={{ color: "rgba(201,195,181,0.8)" }}>
+                    {c.memberBannerBody}
+                  </p>
+                </div>
               </motion.div>
 
               {/* Date/location pills */}

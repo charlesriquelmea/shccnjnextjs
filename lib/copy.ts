@@ -542,6 +542,12 @@ export const copy = {
     stickyText: `🏆 Descuento SHCCNJ $100 · Precio miembro: $197 · Termina en`,
     stickyBtn: "Reclamar →",
 
+    // ── Member Banner ────────────────────────────────────────────────────────
+    memberBannerTitle: "Beneficio Exclusivo para Miembros",
+    memberBannerBody:
+      "Como miembro activo de la Cámara Hispana de Comercio de NJ, tienes acceso a un descuento inmediato de $100 en cualquier solución de infraestructura digital o IA de Protolylat. Sin condiciones. Solo presenta tu membresía.",
+
+
     // Footer
     footerTagline: "Formación tecnológica para la comunidad latina en NJ y USA. Partner oficial de la SHCCNJ.",
     footerEventLabel: "Evento",
@@ -660,6 +666,12 @@ export const copy = {
       { icon: "🎓", text: "+200 Students Trained" },
       { icon: "💬", text: "Support in Spanish" },
     ],
+
+    // ── Member Banner ────────────────────────────────────────────────────────
+    memberBannerTitle: "Exclusive Member Benefit",
+    memberBannerBody:
+      "As an active HCC-NJ member, you receive an immediate $100 discount on any Protolylat digital infrastructure or AI solution. No strings attached. Simply present your membership.",
+
 
     // ── Advantage Section ────────────────────────────────────────────────────
     advantageTitle: "Why Protolylat for your New Jersey business?",
