@@ -16,12 +16,13 @@ const fadeUpVariants = {
 interface FormSectionProps {
   c: Copy
   lang: Lang
+  formRef: React.RefObject<HTMLDivElement | null>
   prefersReducedMotion: boolean
 }
 
-export function FormSection({ c, lang, prefersReducedMotion }: FormSectionProps) {
+export function FormSection({ c, lang, formRef, prefersReducedMotion }: FormSectionProps) {
   return (
-    <section
+    <section ref={formRef}
       id="form"
       className="py-20 px-4 sm:px-6"
       style={{ backgroundColor: "#0F172A" }}
@@ -228,9 +229,10 @@ interface StickyBarProps {
   c: Copy
   prefersReducedMotion: boolean
   countdown: {d:string; h: string; m: string; s: string }
+  onCtaClick: () => void
 }
 
-export function StickyBar({ c, prefersReducedMotion, countdown }: StickyBarProps) {
+export function StickyBar({ c, prefersReducedMotion,onCtaClick, countdown }: StickyBarProps) {
   const [visible, setVisible] = useState(false)
   const [formInView, setFormInView] = useState(false)
 
@@ -273,10 +275,7 @@ export function StickyBar({ c, prefersReducedMotion, countdown }: StickyBarProps
               style={{ backgroundColor: "#C9A84C" }}
               onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#E8C96A" }}
               onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#C9A84C" }}
-              onClick={() => {
-                window.open(WHATSAPP_URL, "_blank", "noopener,noreferrer")
-                trackEvent("cta_click", { location: "sticky_bar" })
-              }}
+              onClick={onCtaClick}
             >
               {c.stickyBtn}
             </Button>
