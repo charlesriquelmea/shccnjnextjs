@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -13,7 +13,8 @@ interface NavbarProps {
   lang: Lang
   setLang: (l: Lang) => void
   prefersReducedMotion: boolean
-  countdown: { h: string; m: string; s: string }
+  countdown: {d:string, h: string; m: string; s: string }
+  onCtaClick: () => void
 }
 
 function CoBrandLockup() {
@@ -66,7 +67,7 @@ function CoBrandLockup() {
   )
 }
 
-export function Navbar({ c, lang, setLang, prefersReducedMotion, countdown }: NavbarProps) {
+export function Navbar({ c, lang, setLang, prefersReducedMotion, countdown, onCtaClick }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -76,11 +77,11 @@ export function Navbar({ c, lang, setLang, prefersReducedMotion, countdown }: Na
     return () => window.removeEventListener("scroll", handler)
   }, [])
 
-  const scrollTo = (href: string) => {
+  const scrollTo = useCallback((href: string) => {
+    setMobileOpen(false)
     const el = document.querySelector(href)
     if (el) el.scrollIntoView({ behavior: "smooth" })
-    setMobileOpen(false)
-  }
+  }, [])
 
   const handleLangToggle = (l: Lang) => {
     setLang(l)
@@ -157,7 +158,7 @@ export function Navbar({ c, lang, setLang, prefersReducedMotion, countdown }: Na
             style={{ backgroundColor: "#C9A84C" }}
             onMouseEnter={(e) => { e.currentTarget.style.backgroundColor = "#E8C96A" }}
             onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = "#C9A84C" }}
-            onClick={() => handleCTAClick("navbar")}
+            onClick={onCtaClick}
           >
             {c.navCta}
           </Button>

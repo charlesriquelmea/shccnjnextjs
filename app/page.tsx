@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, useCallback, useRef } from "react"
 import { copy } from "@/lib/copy"
 import type { Lang } from "@/lib/copy"
 import { useCountdown } from "@/hooks/use-countdown"
@@ -28,6 +28,8 @@ export default function LandingPage() {
   const [lang, setLang] = useState<Lang>("es")
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const countdown = useCountdown()
+  const formRef = useRef<HTMLDivElement>(null)
+  const [highlightForm, setHighlightForm] = useState(false)
 
   useEffect(() => {
     const mq = window.matchMedia("(prefers-reduced-motion: reduce)")
@@ -35,6 +37,14 @@ export default function LandingPage() {
     const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches)
     mq.addEventListener("change", handler)
     return () => mq.removeEventListener("change", handler)
+  }, [])
+
+  const scrollToForm = useCallback(() => {
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth", block: "start" })
+      setHighlightForm(true)
+      setTimeout(() => setHighlightForm(false), 1200)
+    }
   }, [])
 
   const c = copy[lang]
@@ -48,6 +58,7 @@ export default function LandingPage() {
         setLang={setLang}
         prefersReducedMotion={prefersReducedMotion}
         countdown={countdown}
+        onCtaClick={scrollToForm}
       />
       <main>
         <HeroSection c={c} prefersReducedMotion={prefersReducedMotion} />
@@ -70,11 +81,11 @@ export default function LandingPage() {
         <CredibilitySection c={c} prefersReducedMotion={prefersReducedMotion} />
         <InstructorSection c={c} prefersReducedMotion={prefersReducedMotion} />
         <FAQSection c={c} prefersReducedMotion={prefersReducedMotion} />
-        <FormSection c={c} lang={lang} prefersReducedMotion={prefersReducedMotion} />
+        <FormSection c={c} lang={lang} formRef={formRef} prefersReducedMotion={prefersReducedMotion} />
         <FinalCTASection c={c} prefersReducedMotion={prefersReducedMotion} countdown={countdown} />
       </main>
       <Footer c={c} lang={lang} />
-      <StickyBar c={c} prefersReducedMotion={prefersReducedMotion} countdown={countdown} />
+      <StickyBar c={c} prefersReducedMotion={prefersReducedMotion} onCtaClick={scrollToForm} countdown={countdown} />
     </div>
   )
 }
