@@ -88,8 +88,8 @@ export const copy = {
     heroCta: "🏆 Reclamar mis $100 de Descuento →",
     heroCopy: "Descuento de $100 exclusivo miembros SHCCNJ · $197 vs $297 precio público · Garantía de 30 días",
     heroSecondary: "Ver qué aprenderás ↓",
-    heroPricePublic: "$297",
-    heroPriceMember: "$197",
+    heroPricePublic: "$497",
+    heroPriceMember: "$397",
     heroPriceLabel: "precio exclusivo miembros SHCCNJ",
     heroPills: [
       { icon: "📅", text: "Sábado 2 de Mayo, 2026" },
@@ -279,7 +279,7 @@ export const copy = {
     valueTotalLabel: "Valor total del programa:",
     valueTotalPrice: "$1,336",
     valueYourLabel: "Tu inversión hoy (miembro SHCCNJ):",
-    valueYourPrice: "$197",
+    valueYourPrice: "$397",
     valueAnchor:
       "Un dev en NJ cobra $150/hr. 3 horas de consultoría = $450. Tú pagas $197 y aprendes a construirlo tú — para siempre.",
 
@@ -301,8 +301,8 @@ export const copy = {
       {
         label: "Miembro SHCCNJ",
         badge: "Precio Miembro",
-        price: "$197",
-        originalPrice: "$297",
+        price: "$397",
+        originalPrice: "$497",
         savings: "Ahorras $100 por ser miembro SHCCNJ 🏆",
         description: "Exclusivo para miembros activos de la Statewide Hispanic Chamber of Commerce NJ.",
         cta: "Reclamar mi Descuento de $100 →",
@@ -311,8 +311,8 @@ export const copy = {
       {
         label: "Aliados del ecosistema",
         badge: "Aliados",
-        price: "$247",
-        originalPrice: "$297",
+        price: "$347",
+        originalPrice: "$397",
         savings: "Ahorras $50",
         description: "Para asesores de negocios, contadores, coaches y consultores que refieren clientes.",
         cta: "Quiero este precio →",
@@ -320,8 +320,8 @@ export const copy = {
       {
         label: "Público general",
         badge: "General",
-        price: "$297",
-        originalPrice: "$397",
+        price: "$397",
+        originalPrice: "$497",
         savings: "Precio sube a $397 pronto",
         description: "Acceso completo al taller. Precio vigente mientras haya cupos disponibles.",
         cta: "Asegurar mi cupo →",
@@ -637,8 +637,8 @@ export const copy = {
     heroCta: "🏆 Claim my $100 Discount →",
     heroCopy: "$100 discount exclusive to SHCCNJ members · $197 vs $297 public price · 30-day guarantee",
     heroSecondary: "See what you'll learn ↓",
-    heroPricePublic: "$297",
-    heroPriceMember: "$197",
+    heroPricePublic: "$497",
+    heroPriceMember: "$397",
     heroPriceLabel: "exclusive SHCCNJ member price",
     heroPills: [
       { icon: "📅", text: "Saturday, May 2, 2026" },
@@ -826,7 +826,7 @@ export const copy = {
     valueTotalLabel: "Total program value:",
     valueTotalPrice: "$1,336",
     valueYourLabel: "Your investment today (SHCCNJ member):",
-    valueYourPrice: "$197",
+    valueYourPrice: "$397",
     valueAnchor:
       "A dev in NJ charges $150/hr. 3 hours of consulting = $450. You pay $197 and learn to build it yourself — forever.",
 
@@ -846,8 +846,8 @@ export const copy = {
       {
         label: "SHCCNJ Member",
         badge: "Member Price",
-        price: "$197",
-        originalPrice: "$297",
+        price: "$397",
+        originalPrice: "$497",
         savings: "Save $100 for being an SHCCNJ member 🏆",
         description: "Exclusive for active members of the Statewide Hispanic Chamber of Commerce NJ.",
         cta: "Claim my $100 Discount →",
@@ -856,8 +856,8 @@ export const copy = {
       {
         label: "Ecosystem allies",
         badge: "Allies",
-        price: "$247",
-        originalPrice: "$297",
+        price: "$347",
+        originalPrice: "$497",
         savings: "Save $50",
         description: "For business advisors, accountants, coaches, and consultants who refer clients.",
         cta: "Get this price →",
@@ -865,8 +865,8 @@ export const copy = {
       {
         label: "General public",
         badge: "General",
-        price: "$297",
-        originalPrice: "$397",
+        price: "$397",
+        originalPrice: "$497",
         savings: "Price increases soon",
         description: "Full workshop access. Price valid while spots are available.",
         cta: "Secure my spot →",
