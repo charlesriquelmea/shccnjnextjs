@@ -5,9 +5,9 @@ export const WHATSAPP_URL =
   "https://wa.me/15513349406?text=Hola%20Carlos%2C%20soy%20miembro%20de%20la%20Statewide%20Hispanic%20Chamber%20of%20Commerce%20NJ%20%28SHCCNJ%29%20y%20quiero%20reclamar%20mi%20descuento%20exclusivo%20de%20%24100%20para%20el%20taller%20de%20Next.js%20del%20s%C3%A1bado%202%20de%20mayo.%20Mi%20nombre%20es%3A"
 
 export const WA_NUMBER = "15513349406"
-export const EVENT_DATE = "Sábado 2 de Mayo, 2026"
-export const EVENT_DATE_EN = "Saturday, May 2, 2026"
-export const TARGET_DATE = new Date("2026-05-02T09:00:00-04:00")
+export const EVENT_DATE = "Sábado 16 de Mayo, 2026"
+export const EVENT_DATE_EN = "Saturday, May 16, 2026"
+export const TARGET_DATE = new Date("2026-05-16T09:00:00-04:00")
 export const MEMBER_PRICE = 197
 export const PUBLIC_PRICE = 297
 export const DISCOUNT = 100
@@ -53,7 +53,7 @@ export const INSTRUCTORS = [
 export const copy = {
   es: {
     // Announcement bar
-    announcementBar: `🏆 Beneficio Exclusivo SHCCNJ · Descuento de $100 para miembros activos · Solo hasta el Sábado 2 de Mayo → Reclamar ahora`,
+    announcementBar: `🏆 Beneficio Exclusivo SHCCNJ · Descuento de $100 para miembros activos · Solo hasta el Sábado 16 de Mayo → Reclamar ahora`,
 
     // Navbar
     navLogo: "BuildInNextjs",
@@ -75,11 +75,11 @@ export const copy = {
       "Construye tu sitio web en Next.js en 3 horas.",
       "Sin saber programar. Sin depender de nadie.",
       "Con el respaldo de la comunidad SHCCNJ.",
-      "Tu negocio en línea. Este Sábado 2 de Mayo.",
+      "Tu negocio en línea. Este Sábado 16 de Mayo.",
       "Descuento exclusivo de $100 para miembros.",
     ],
     subheadline:
-      "Como miembro activo de la Statewide Hispanic Chamber of Commerce NJ, tienes acceso preferencial a nuestro taller intensivo de Next.js. Aprende a construir tu sitio web desde cero en solo 3 horas — este Sábado 2 de Mayo, 2026.",
+      "Como miembro activo de la Statewide Hispanic Chamber of Commerce NJ, tienes acceso preferencial a nuestro taller intensivo de Next.js. Aprende a construir tu sitio web desde cero en solo 3 horas — este Sábado 16 de Mayo, 2026.",
     trustSignals: [
       { icon: "🏆", text: "Exclusivo SHCCNJ" },
       { icon: "🛡️", text: "Garantía 30 días" },
@@ -92,7 +92,7 @@ export const copy = {
     heroPriceMember: "$197",
     heroPriceLabel: "precio exclusivo miembros SHCCNJ",
     heroPills: [
-      { icon: "📅", text: "Sábado 2 de Mayo, 2026" },
+      { icon: "📅", text: "Sábado 16 de Mayo, 2026" },
       { icon: "📍", text: "New Jersey + Online" },
       { icon: "⏱", text: "Solo 3 Horas" },
       { icon: "🇺🇸", text: "En Español" },
@@ -441,10 +441,10 @@ export const copy = {
       },
       {
         q: "¿El taller es presencial o virtual?",
-        a: "Ofrecemos ambas modalidades. La sesión presencial es en New Jersey el sábado 2 de mayo. La opción online incluye acceso en vivo + grabación completa para que repases a tu ritmo.",
+        a: "Ofrecemos ambas modalidades. La sesión presencial es en New Jersey el sábado 16 de Mayo. La opción online incluye acceso en vivo + grabación completa para que repases a tu ritmo.",
       },
       {
-        q: "¿Qué pasa si no puedo asistir el 2 de mayo?",
+        q: "¿Qué pasa si no puedo asistir el 16 de Mayo?",
         a: "Recibes la grabación completa + todos los materiales + acceso al grupo privado de WhatsApp por 30 días. Tu inversión está protegida con nuestra garantía de 30 días.",
       },
       {
@@ -524,11 +524,11 @@ export const copy = {
     finalTitle: "Tu membresía en SHCCNJ ya te dio el acceso.",
     finalTitleAccent: "Solo falta que lo uses.",
     finalSubheadline:
-      "El Sábado 2 de Mayo tienes la oportunidad de construir tu presencia digital, dejar de depender de agencias y aprender con tu comunidad.",
+      "El Sábado 16 de Mayo tienes la oportunidad de construir tu presencia digital, dejar de depender de agencias y aprender con tu comunidad.",
     finalTypewriterPhrases: [
       "3 horas. Tú. Tu código. En vivo.",
       "Sin devs. Sin esperar. La habilidad es tuya.",
-      "Sábado 2 de Mayo. 50 cupos. ¿Entras?",
+      "Sábado 16 de Mayo. 50 cupos. ¿Entras?",
     ],
     countdownLabel: "Descuento miembro SHCCNJ termina en:",
     finalCta: "🏆 Reclamar mis $100 de Descuento →",
@@ -536,7 +536,7 @@ export const copy = {
     finalMicro: "→ Registro por WhatsApp · 3 cuotas de $66/mes disponibles · Garantía 30 días",
     finalSocial: `🔥 ${ENROLLED_THIS_WEEK} personas ya reservaron su lugar esta semana`,
     finalEventCard: [
-      "📅 Sábado 2 de Mayo, 2026",
+      "📅 Sábado 16 de Mayo, 2026",
       "⏰ 3 horas intensivas",
       "📍 New Jersey + Online",
       "💰 $197 para miembros SHCCNJ (vs $297 precio público)",
@@ -557,7 +557,7 @@ export const copy = {
     footerWaBtn: "Chatear por WhatsApp →",
     footerSHCCNJPartner: "Partner Tecnológico Oficial",
     footerSHCCNJDisclaimer:
-      "Esta oferta es exclusiva para miembros activos de la Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat se reserva el derecho de verificar membresía activa antes de aplicar el descuento. Válido hasta el 2 de Mayo de 2026.",
+      "Esta oferta es exclusiva para miembros activos de la Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat se reserva el derecho de verificar membresía activa antes de aplicar el descuento. Válido hasta el 16 de Mayo de 2026.",
     footerCopy: `© 2026 Protolylat · BuildInNextjs. Evento 100% online. Horario Eastern Time (ET). NJ / NY / USA. Hecho con ❤️ para la comunidad hispana.`,
 
     heroUrgency: {
@@ -603,7 +603,7 @@ export const copy = {
   },
 
   en: {
-    announcementBar: `🏆 SHCCNJ Exclusive Benefit · $100 discount for active members · Only until Saturday May 2 → Claim now`,
+    announcementBar: `🏆 SHCCNJ Exclusive Benefit · $100 discount for active members · Only until Saturday May 16 → Claim now`,
 
     navLogo: "BuildInNextjs",
     navLinks: [
@@ -623,11 +623,11 @@ export const copy = {
       "Build your website in Next.js in 3 hours.",
       "No coding required. No depending on anyone.",
       "Backed by the SHCCNJ community.",
-      "Your business online. This Saturday, May 2.",
+      "Your business online. This Saturday, May 16.",
       "Exclusive $100 discount for members.",
     ],
     subheadline:
-      "As an active member of the Statewide Hispanic Chamber of Commerce NJ, you have preferential access to our intensive Next.js workshop. Learn to build your website from scratch in just 3 hours — this Saturday, May 2, 2026.",
+      "As an active member of the Statewide Hispanic Chamber of Commerce NJ, you have preferential access to our intensive Next.js workshop. Learn to build your website from scratch in just 3 hours — this Saturday, May 16, 2026.",
     trustSignals: [
       { icon: "🏆", text: "SHCCNJ Exclusive" },
       { icon: "🛡️", text: "30-day guarantee" },
@@ -640,7 +640,7 @@ export const copy = {
     heroPriceMember: "$197",
     heroPriceLabel: "exclusive SHCCNJ member price",
     heroPills: [
-      { icon: "📅", text: "Saturday, May 2, 2026" },
+      { icon: "📅", text: "Saturday, May 16, 2026" },
       { icon: "📍", text: "New Jersey + Online" },
       { icon: "⏱", text: "Only 3 Hours" },
       { icon: "🇺🇸", text: "In Spanish" },
@@ -970,10 +970,10 @@ export const copy = {
       },
       {
         q: "Is the workshop in-person or virtual?",
-        a: "We offer both. The in-person session is in New Jersey on Saturday, May 2. The online option includes live access + full recording so you can review at your own pace.",
+        a: "We offer both. The in-person session is in New Jersey on Saturday, May 16. The online option includes live access + full recording so you can review at your own pace.",
       },
       {
-        q: "What if I can't attend on May 2?",
+        q: "What if I can't attend on May 16?",
         a: "You receive the full recording + all materials + access to the private WhatsApp group for 30 days. Your investment is protected with our 30-day guarantee.",
       },
       {
@@ -1051,11 +1051,11 @@ export const copy = {
     finalTitle: "Your SHCCNJ membership already gave you access.",
     finalTitleAccent: "You just need to use it.",
     finalSubheadline:
-      "On Saturday, May 2 you have the opportunity to build your digital presence, stop depending on agencies, and learn with your community.",
+      "On Saturday, May 16 you have the opportunity to build your digital presence, stop depending on agencies, and learn with your community.",
     finalTypewriterPhrases: [
       "3 hours. You. Your code. Live.",
       "No devs. No waiting. The skill is yours.",
-      "Saturday May 2. 50 spots. Are you in?",
+      "Saturday May 16. 50 spots. Are you in?",
     ],
     countdownLabel: "SHCCNJ member discount ends in:",
     finalCta: "🏆 Claim my $100 Discount →",
@@ -1063,7 +1063,7 @@ export const copy = {
     finalMicro: "→ WhatsApp registration · 3 installments of $66/mo available · 30-day guarantee",
     finalSocial: `🔥 ${ENROLLED_THIS_WEEK} people already reserved this week`,
     finalEventCard: [
-      "📅 Saturday, May 2, 2026",
+      "📅 Saturday, May 16, 2026",
       "⏰ 3 intensive hours",
       "📍 New Jersey + Online",
       "💰 $197 for SHCCNJ members (vs $297 public price)",
@@ -1082,7 +1082,7 @@ export const copy = {
     footerWaBtn: "Chat on WhatsApp →",
     footerSHCCNJPartner: "Official Technology Partner",
     footerSHCCNJDisclaimer:
-      "This offer is exclusive for active members of the Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat reserves the right to verify active membership before applying the discount. Valid until May 2, 2026.",
+      "This offer is exclusive for active members of the Statewide Hispanic Chamber of Commerce of New Jersey (SHCCNJ). Protolylat reserves the right to verify active membership before applying the discount. Valid until May 16, 2026.",
     footerCopy: `© 2026 Protolylat · BuildInNextjs. 100% online event. Eastern Time (ET). NJ / NY / USA. Made with ❤️ for the Hispanic community.`,
 
     heroUrgency: {
